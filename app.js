@@ -1,3 +1,11 @@
+/*
+console.log('1 + 1');				// 1 + 1
+console.log(eval('1 + 1'));	// 2
+const arr = ['A', 'B'];
+console.log( 'arr' );				// arr
+console.log( eval('arr') ); // ["A", "B"]
+*/
+
 /*************** global init **************/
 const express = require('express')
 const app = express()
