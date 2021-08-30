@@ -26,14 +26,14 @@
 			<li class="breadcrumb-item"><a href="/menu/food">Food</a></li>
 			<li class="breadcrumb-item"><a href="/menu/desert">Desert</a></li>
 		</ul>
-		<h1 class="logo">잘나가 커피 메뉴</h1>
+		<h1 class="logo">잘나가 디저트 메뉴</h1>
 		<ul class="lists">
-		<% for(let menu of menus) { %> 
-			<li class="list">
-				<div class="title"><%= menu.name %> </div>
-				<div class="price"><%= numeral(menu.price).format('0,0') %> 원</div>
-			</li>
-		<% } %> 
+			<% for(let v of desert) { %> 
+				<li class="list">
+					<div class="title"><%= v.name %> </div>
+					<div class="price"><%= numeral(v.price).format('0,0') %> 원</div>
+				</li>
+			<% } %> 
 		</ul>
 	</div>
 </body>
