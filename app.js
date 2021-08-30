@@ -1,4 +1,5 @@
 /*
+eval(문자열수식) => 수식이 실행
 console.log('1 + 1');				// 1 + 1
 console.log(eval('1 + 1'));	// 2
 const arr = ['A', 'B'];
