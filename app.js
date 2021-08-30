@@ -47,16 +47,9 @@ app.get('/coffee', (req, res, next) => {
 	res.status(200).render('menu', { menus, numeral })
 })
 
-app.get('/menu/coffee', (req, res, next) => {
-	res.status(200).render('coffee', { coffee, numeral })
-})
-
-app.get('/menu/food', (req, res, next) => {
-	res.status(200).render('food', { food, numeral })
-})
-
-app.get('/menu/desert', (req, res, next) => {
-	res.status(200).render('desert', { desert, numeral })
+app.get('/menu/:name', (req, res, next) => {
+	const name = req.params.name
+	res.status(200).render(name, { menu: eval(name), numeral })
 })
 
 
