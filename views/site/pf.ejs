@@ -2,15 +2,12 @@
 <div class="wrapper">
 	<%- include('../inc/navi') %>
 	<!-- 본문내용 -->
-	<section class="about-wrapper content-wrapper">
+	<section class="pf-wrapper content-wrapper">
 		<%- include('../inc/title-bar') %>
-		<div class="about-wrap">
-			<div class="img-wp">
-				<img src="/img/f1.jpg" alt="me" class="w100">
-			</div>
-			<div class="content-wp">
-				<%= content %> 
-			</div>
+		<div class="pf-wrap">
+		<% for(let list of lists) { %> 
+			<%- include('../components/list', { list }) %> 
+		<% } %> 
 		</div>
 	</section>
 	<!-- 본문내용.끝 -->
