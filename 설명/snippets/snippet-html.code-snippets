@@ -16,6 +16,7 @@
 			"\t<link rel=\"stylesheet\" href=\"../css/.css\">",
 			"\t<script src=\"../js/jquery.min.js\"></script>",
 			"\t<script src=\"../js/moment.min.js\"></script>",
+			"\t<script src=\"../js/lodash.min.js\"></script>",
 			"\t<script src=\"../js/util.js\"></script>",
 			"</head>",
 			"<body>",
