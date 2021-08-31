@@ -1,0 +1,22 @@
+doctype html 
+html(lang="ko")
+	head 
+		meta(charset="utf-8")
+		title= title
+		link(rel="stylesheet", href="/css/bootstrap.min.css")
+		link(rel="stylesheet", href="/css/base.css")
+		link(rel="stylesheet", href="/css/test.css")
+	body
+		.wrapper
+			h1= title 
+			p= `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem placeat voluptatibus amet. Veniam sed libero ${title} laboriosam, numquam explicabo asperiores velit fugit! Ducimus corporis voluptatum sint possimus eum totam maiores vero?`
+			ul.lists
+				if lists
+					//- 주석
+					each list in lists
+						li.list
+							.img-wp
+								img.w100(src=`/img/${list.src}`)
+							.title-wp= list.title
+				else 
+					p 데이터가 없습니다.

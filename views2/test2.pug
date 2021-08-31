@@ -1,0 +1,42 @@
+doctype html
+html(lang='ko')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		title About Me 
+		link(rel='stylesheet' href='/css/all.min.css')
+		link(rel='stylesheet' href='/css/bootstrap.min.css')
+		link(rel='stylesheet' href='/css/base.css')
+		//- normalize
+		link(rel='stylesheet' href='/css/common.css')
+		// common
+		link(rel='stylesheet' href='/css/about.css')
+		script(src='/js/jquery.min.js')
+		script(src='/js/moment.min.js')
+		script(src='/js/lodash.min.js')
+		script(src='/js/util.js')
+	body
+		.wrapper
+			nav
+				ul.breadcrumb.text-center
+					li.breadcrumb-item
+						a(href='/about') about
+					li.breadcrumb-item
+						a(href='/pf') pf
+					li.breadcrumb-item
+						a(href='/team') team
+			// 본문내용
+			section.about-wrapper.content-wrapper
+				style.
+					h2.title-bar {font-size: 1.5em; color:darkslategrey; margin-bottom: .5em;}
+				h2.title-bar About Me 
+				.about-wrap
+					.img-wp
+						img.w100(src='/img/f1.jpg' alt='me')
+					.content-wp
+						| Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores, ratione sed quam aliquid suscipit doloremque, voluptatum reprehenderit, pariatur id officiis! Quam dolore consectetur voluptatibus laudantium nisi repudiandae, quasi quas.
+			// 본문내용.끝
+			footer.footer-wrap.p-5.bg-dark.text-light.text-center
+				.copyright copyright&copy;booldook. Allright reserved. 
+		script(src='/js/about.js')
