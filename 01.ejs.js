@@ -47,18 +47,19 @@ app.use(express.urlencoded({ extended: false }))
 
 /*************** router init **************/
 app.use('/', express.static('./public'))
+app.use('/resources', express.static('./assets'))
 app.get('/coffee', (req, res, next) => {
 	/* const sendMenus = _.cloneDeep(menus).map(v => {
 		v.price = numeral(v.price).format('0,0')
 		return v
 	}) */
 	// res.status(200).render(view파일, {})
-	res.status(200).render('menu', { menus, numeral })
+	res.status(200).render('cafe/menu', { menus: coffee, numeral })
 })
 
 app.get('/menu/:name', (req, res, next) => {
 	const name = req.params.name
-	res.status(200).render(name, { menu: eval(name), numeral })
+	res.status(200).render('cafe/'+name, { menu: eval(name), numeral })
 })
 
 
