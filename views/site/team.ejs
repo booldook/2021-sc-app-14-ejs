@@ -1,0 +1,17 @@
+<%- include('../inc/head') %>
+<div class="wrapper">
+	<%- include('../inc/navi') %>
+	<!-- 본문내용 -->
+	<section class="team-wrapper content-wrapper">
+		<%- include('../inc/title-bar') %>
+		<h3 class="sub-title"><%= subTitle %> </h3>
+		<div class="team-wrap">
+		<% for(let list of lists) { %> 
+			<%- include('../components/list', { list }) %> 
+		<% } %> 
+		</div>
+	</section>
+	<!-- 본문내용.끝 -->
+	<%- include('../inc/footer') %> 
+</div> 
+<%- include('../inc/foot') %> 

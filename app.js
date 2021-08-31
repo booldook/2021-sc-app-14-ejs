@@ -34,6 +34,19 @@ app.get('/pf', (req, res, next) => {
 	res.render('site/pf', { title, file, lists })
 })
 
+app.get('/team', (req, res, next) => {
+	const title = 'Team Infomation'
+	const subTitle = '팀원을 소개합니다.'
+	const file = 'team'
+	const lists = [
+		{ title: 'CEO', src: 'team1.jpg' },
+		{ title: 'CTO', src: 'team2.jpg' },
+		{ title: 'Engineer', src: 'team3.jpg' },
+		{ title: 'Designer', src: 'team4.jpg' },
+	]
+	res.render('site/team', { title, subTitle, file, lists })
+})
+
 
 /*************** server init **************/
 app.listen(port, () => { console.log('http://127.0.0.1:'+port) })
