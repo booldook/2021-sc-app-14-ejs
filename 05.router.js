@@ -1,4 +1,9 @@
 /**
+ * 언어(language/html/css/javascript, java, c) - 문법
+ * 라이브러리(jquery, lodash) - 유틸리티 모음
+ * 프레임워크(express, react, vue, spring)
+ * 
+ * 
  * 1. router는 사이트가 커짐에 따라 분리해야 한다.
  * 2. 예) 쇼핑몰
  * 3. 상품리스트
@@ -37,7 +42,10 @@ app.use('/member', memberRouter)
 
 
 /*************** error init **************/
-
+const notFoundRouter = require('./routes/error/404')
+const errorRouter = require('./routes/error/500')
+app.use(notFoundRouter)
+app.use(errorRouter)
 
 
 
