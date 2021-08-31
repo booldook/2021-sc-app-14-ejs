@@ -1,10 +1,10 @@
 extends ../layout/sample-layout
 
-include ../mixins/list
+//- include ../mixins/list
 
 block content
 	section.pf-wrapper.content-wrapper
 		include ../inc/title-bar
 		.pf-wrap
 			each list in lists 
-				+list(list)
+				include ../components/list
