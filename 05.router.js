@@ -37,6 +37,7 @@ app.use('/', express.static('./public'))
 const shopRouter = require('./routes/shop')
 const memberRouter = require('./routes/member')
 
+
 app.use('/shop', shopRouter)
 app.use('/member', memberRouter)
 
