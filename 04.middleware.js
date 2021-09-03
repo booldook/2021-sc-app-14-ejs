@@ -64,6 +64,12 @@ app.get('/test', mw2_1, mw3_1('HONG'), (req, res, next) => {
 	res.json({ headers, mw1, mw2, mw3, mw4, mw5, mw2_1, mw3_1 })
 })
 
+// 6번 방식 - 내부에서 미들웨어 실행
+app.get('/test2', (req, res, next) => {
+	mw3_1('HONG')(req, res, next)
+})
+
+
 
 
 
